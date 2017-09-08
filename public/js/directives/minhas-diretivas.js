@@ -1,17 +1,32 @@
 angular.module('minhasDiretivas', [])
-.directive('meuPainel', function() {
-  var ddo = {}; //ddo directive definition object
-  ddo.restrict = "AE"; //A de atributo e E de elemento
-  /* Isso significa que a diretiva pode
-    ser usada como atributo em uma tag
-    ou como um elemento, ou seja, uma tag */
-  ddo.scope = {
-    titulo: '@titulo'
-  };
+	.directive('meuPainel', function() {
 
-  ddo.transclude = true;
+		var ddo = {};
 
-  ddo.templateUrl = 'js/directives/meu-painel.html'
+		ddo.restrict = "AE";
+        ddo.transclude = true;
 
-         return ddo;
-     });
+
+		ddo.scope = {
+            titulo: '@'
+        };
+
+        ddo.templateUrl = 'js/directives/meu-painel.html';
+
+		return ddo;
+	})
+    .directive('minhaFoto', function() {
+
+        var ddo = {};
+
+        ddo.restrict = "AE";
+
+        ddo.scope = {
+            titulo: '@',
+            url: '@'
+        };
+
+        ddo.template = '<img class="img-responsive center-block" src="{{url}}" alt="{{titulo}}">';           
+        
+        return ddo;
+    });

@@ -7,5 +7,6 @@
 - Download or clone the project to your machine
 - Make sure that you have Node JS installed (http://nodejs.org/)
 - Open the project directory in a shell of your choice (GitBash, cmder, cmd ...)
-- Run the command line "npm start"
+- Run the command line "npm install"
+- Then run the command line "npm start"
 - Then just access localhost with a web navigator using the port indicated in the shell
